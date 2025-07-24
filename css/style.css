@@ -5,12 +5,16 @@
   --dark: #14141f;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .button1 {
   background: #08b1c4;
 }
 
 .title1 {
-  color: white;
+  color: #14141f;
 }
 
 .title2 {
@@ -28,19 +32,12 @@ font-family: 'Poppins', sans-serif; */
   font-weight: 700 !important;
 }
 
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 45px;
-  bottom: 45px;
-  z-index: 99;
-}
-
 /*** Button ***/
 .btn {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   transition: 0.5s;
+
 }
 
 .btn.btn-primary,
@@ -75,7 +72,48 @@ font-family: 'Poppins', sans-serif; */
 }
 
 /*** Navbar ***/
-.navbar-light .navbar-nav .nav-link {
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.hamburg-icon {
+  color: #14141f;
+}
+
+.hamburg-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.navbar-light .navbar-nav .nav-link,
+  .sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    margin-left: 0;
+    color: var(--dark) !important;
+  }
+
+  .sticky-top.navbar-light {
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+  }
+
+
+@media (min-width: 992px) {
+  .navbar-light {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(256, 256, 256, 0.1);
+    z-index: 999;
+    background-color: transparent;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
   font-family: "Nunito", sans-serif;
   position: relative;
   margin-right: 25px;
@@ -87,62 +125,10 @@ font-family: 'Poppins', sans-serif; */
   transition: 0.5s;
 }
 
-.sticky-top.navbar-light .navbar-nav .nav-link {
-  padding: 20px 0;
-  color: var(--dark) !important;
-}
-
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: var(--primary) !important;
 }
-
-.navbar-light .navbar-brand img {
-  max-height: 60px;
-  transition: 0.5s;
-}
-
-.sticky-top.navbar-light .navbar-brand img {
-  max-height: 45px;
-}
-
-@media (max-width: 991.98px) {
-  .sticky-top.navbar-light {
-    position: relative;
-    background: #ffffff;
-  }
-
-  .navbar-light .navbar-collapse {
-    margin-top: 15px;
-    border-top: 1px solid #dddddd;
-  }
-
-  .navbar-light .navbar-nav .nav-link,
-  .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 10px 0;
-    margin-left: 0;
-    color: var(--dark) !important;
-  }
-
-  .navbar-light .navbar-brand img {
-    max-height: 45px;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-light {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid rgba(256, 256, 256, 0.1);
-    z-index: 999;
-  }
-
-  .sticky-top.navbar-light {
-    position: fixed;
-    background: #ffffff;
-  }
 
   .navbar-light .navbar-nav .nav-link::before {
     position: absolute;
@@ -227,7 +213,7 @@ font-family: 'Poppins', sans-serif; */
 
 .service-item:hover {
   background: var(--primary);
-  scale: 1.1;
+  scale: 1.05;
 }
 
 .service-item * {
@@ -339,6 +325,10 @@ font-family: 'Poppins', sans-serif; */
   .testimonial-carousel::after {
     width: 300px;
   }
+
+  .title1{
+    color: white;
+  }
 }
 
 .testimonial-carousel .owl-item .testimonial-item,
@@ -442,4 +432,13 @@ font-family: 'Poppins', sans-serif; */
   margin-right: 0;
   padding-right: 0;
   border-right: none;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+  padding: 9px;
 }
